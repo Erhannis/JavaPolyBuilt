@@ -1,0 +1,36 @@
+<html>
+<head>
+<!-- Include the Polyfill -->
+<script src="javapoly.js"></script>
+
+<!-- Write your Java code -->
+<script type="text/java">
+  package com.demo;
+  import com.javapoly.dom.Window;
+
+  public class Greeter
+  {
+    public static void sayHello(String name)
+    {
+      Window.alert("Hello " + name + ", from Java!");
+    }
+  }
+</script>
+
+<script type="text/java" src="examples/PrintClasspath.jar"></script>
+
+<!-- Invoke your Java code from Javascript -->
+<script type="text/javascript">
+    function blah() {
+        com.demo.Greeter.sayHello("world");
+    }
+    function blah2() {
+        com.erhannis.printclasspath.Main.main(null);
+    }
+</script>
+</head>
+<body>
+    <button onclick='blah()'>blah</button>
+    <button onclick='blah2()'>blah2</button>
+</body>
+</head>
